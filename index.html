@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AETHER — Experiencias Web Inmersivas</title>
+  <meta name="description" content="Estudio creativo especializado en experiencias web 3D inmersivas con WebGL y Three.js.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%97%89%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ══ Preloader ══ -->
+  <div id="preloader">
+    <div class="loader-core">
+      <div class="loader-ring"></div>
+      <div class="loader-pct" id="loaderPct">0%</div>
+    </div>
+    <div class="loader-word">AETHER</div>
+  </div>
+
+  <!-- ══ Canvas 3D ══ -->
+  <canvas id="scene"></canvas>
+
+  <!-- ══ UI Overlay ══ -->
+  <header class="nav">
+    <div class="logo">AETHER<span>®</span></div>
+    <nav class="nav-links">
+      <a href="#hero" data-nav>INICIO</a>
+      <a href="#about" data-nav>ESTUDIO</a>
+      <a href="#work" data-nav>PROYECTOS</a>
+      <a href="#contact" data-nav>CONTACTO</a>
+    </nav>
+    <div class="nav-cta">INICIAR PROYECTO ↗</div>
+  </header>
+
+  <div class="side-hud">
+    <span class="hud-line"></span>
+    <span id="scrollPct">000</span>
+  </div>
+
+  <div class="grain"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <main id="content">
+
+    <!-- HERO -->
+    <section class="panel hero" id="hero">
+      <div class="hero-inner">
+        <p class="kicker reveal">ESTUDIO CREATIVO DIGITAL — EST. 2026</p>
+        <h1 class="hero-title">
+          <span class="line reveal">DISEÑAMOS</span>
+          <span class="line reveal"><em>UNIVERSOS</em></span>
+          <span class="line reveal">INTERACTIVOS</span>
+        </h1>
+        <p class="hero-sub reveal">Experiencias web 3D que convierten visitantes en creyentes.<br>WebGL · Three.js · Motion Design</p>
+        <div class="hero-cta reveal">
+          <a class="btn-primary magnetic" href="#work">EXPLORAR EL VACÍO</a>
+        </div>
+      </div>
+      <div class="scroll-hint">
+        <div class="wheel"></div>
+        <span>DESLIZA</span>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="panel split" id="about">
+      <div class="split-text">
+        <p class="kicker reveal">01 — EL ESTUDIO</p>
+        <h2 class="reveal">Donde el código<br>se convierte en <em>arte</em></h2>
+        <p class="body reveal">Fusionamos ingeniería gráfica en tiempo real, diseño de interfaces y narrativa digital para construir sitios que no se navegan: se habitan. Cada píxel tiene propósito. Cada fotograma, intención.</p>
+        <div class="stats reveal">
+          <div class="stat"><b data-count="120">0</b><span>Proyectos</span></div>
+          <div class="stat"><b data-count="18">0</b><span>Premios</span></div>
+          <div class="stat"><b data-count="9">0</b><span>Países</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="panel split right" id="work">
+      <div class="split-text">
+        <p class="kicker reveal">02 — PROYECTOS</p>
+        <h2 class="reveal">Órbitas<br><em>recientes</em></h2>
+        <ul class="work-list">
+          <li class="work-item reveal"><span class="w-num">/01</span><span class="w-name">NEBULA MOTORS</span><span class="w-tag">CONFIGURADOR 3D</span></li>
+          <li class="work-item reveal"><span class="w-num">/02</span><span class="w-name">VOID COUTURE</span><span class="w-tag">E-COMMERCE</span></li>
+          <li class="work-item reveal"><span class="w-num">/03</span><span class="w-name">PULSE FESTIVAL</span><span class="w-tag">EXPERIENCIA INMERSIVA</span></li>
+          <li class="work-item reveal"><span class="w-num">/04</span><span class="w-name">ORBITAL BANK</span><span class="w-tag">FINTECH</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="panel center" id="contact">
+      <p class="kicker reveal">03 — CONTACTO</p>
+      <h2 class="big-cta reveal">Construyamos<br>algo <em>imposible</em></h2>
+      <a class="mail reveal magnetic" href="mailto:hola@aether.studio">hola@aether.studio</a>
+      <footer class="footer reveal">
+        <span>© 2026 AETHER STUDIO</span>
+        <span>HECHO CON THREE.JS · WEBGL</span>
+      </footer>
+    </section>
+
+  </main>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "./lib/three.module.js",
+      "three/addons/": "./lib/"
+    }
+  }
+  </script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
